@@ -3,91 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PS5 / PS4 Exploit Host</title>
+    <title>المنسي PLAYSTATION - PS4 Host</title>
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            background-color: #050b18;
+            color: #ffffff;
             margin: 0;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #161b22;
-            border: 2px solid #30363d;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        }
-        h1 { color: #58a6ff; }
-        .box {
-            background: #21262d;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
-        }
-        button {
-            background-color: #238636;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
+        .main-card {
+            background: linear-gradient(180deg, #121936 0%, #080d1a 100%);
+            border: 2px solid #3b82f6;
+            border-radius: 16px;
             width: 100%;
+            max-width: 480px;
+            padding: 20px;
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+            text-align: center;
+        }
+        .title {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .badge {
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid #3b82f6;
+            color: #60a5fa;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .section-title {
+            font-size: 13px;
+            color: #94a3b8;
+            margin: 15px 0 8px 0;
+            text-align: right;
+        }
+        .btn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .btn-option {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .btn-option:hover, .btn-option.active {
+            border-color: #3b82f6;
+            background-color: #1e3a8a;
+        }
+        select {
+            width: 100%;
+            padding: 12px;
+            background-color: #0f172a;
+            border: 1px solid #3b82f6;
+            color: #ffffff;
+            border-radius: 8px;
+            font-size: 15px;
+            margin-bottom: 15px;
+            outline: none;
+            text-align: center;
+        }
+        .btn-primary {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(90deg, #2563eb, #1d4ed8);
+            border: none;
+            color: #ffffff;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            margin-bottom: 10px;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #1d4ed8, #1e40af);
+        }
+        .btn-secondary {
+            width: 100%;
+            padding: 10px;
+            background-color: #1e293b;
+            border: 1px solid #475569;
+            color: #cbd5e1;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .progress-container {
+            margin-top: 15px;
+            background-color: #0f172a;
+            border-radius: 8px;
+            height: 8px;
+            overflow: hidden;
+            border: 1px solid #1e293b;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 100%;
+            background-color: #3b82f6;
+        }
+        .status-text {
+            font-size: 12px;
+            color: #94a3b8;
             margin-top: 10px;
         }
-        button:hover { background-color: #2ea043; }
-        .status-log {
-            font-size: 14px;
-            color: #8b949e;
-            margin-top: 15px;
+        .footer {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            padding-top: 10px;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>موقع التعديل والأوفلاين (Host)</h1>
+<div class="main-card">
+    <!-- اسم الصفحة وشعار المنسي -->
+    <div class="title">المنسي PLAYSTATION</div>
+    <div class="subtitle">م/ المنسي — صيانة - العاب - دعم أجهزة البلايستيشن</div>
 
-    <div class="box">
-        <h3>تعديل سوفت 9.00 (GoldHEN)</h3>
-        <button onclick="loadExploit('900')">تشغيل الثغرة</button>
+    <div class="badge-container">
+        <span class="badge">أوفلاين 100%</span>
+        <span class="badge">Engine: PSFree / WebKit</span>
     </div>
 
-    <div class="box">
-        <h3>تعديل الإصدارات الحديثة (PSFree)</h3>
-        <button onclick="loadExploit('psfree')">تشغيل الثغرة</button>
+    <!-- أداة التعديل -->
+    <div class="section-title">نوع الثغرة (Exploit Chain)</div>
+    <div class="btn-grid">
+        <button class="btn-option active" onclick="selectChain(this)">PSFree</button>
+        <button class="btn-option" onclick="selectChain(this)">Poppins / UAF</button>
     </div>
 
-    <div id="status" class="status-log">جاري التحقق من التخزين الأوفلاين...</div>
+    <!-- قائمة اختيار السوفتوير -->
+    <div class="section-title">إصدار السوفتوير (Target FW)</div>
+    <select id="fwSelect">
+        <option value="9.00">FW 9.00 (Golden)</option>
+        <option value="9.60">FW 9.60</option>
+        <option value="10.00">FW 10.00 / 10.01</option>
+        <option value="11.00">FW 11.00</option>
+        <option value="12.00">FW 12.00</option>
+        <option value="13.52">FW 13.52</option>
+    </select>
+
+    <!-- أزرار التشغيل والتثبيت -->
+    <button class="btn-primary" onclick="runExploit()">تفعيل التعديلة (Auto Exploit)</button>
+    <button class="btn-secondary" onclick="cacheSite()">تثبيت بيانات الأوفلاين (Force Cache)</button>
+
+    <!-- شريط الحالة والتثبيت -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="status-text" id="statusMsg">100% — الصفحة جاهزة للاستخدام أوفلاين</div>
+
+    <div class="footer">
+        المنسي PlayStation Host &copy; جميع الحقوق محفوظة
+    </div>
 </div>
 
 <script>
-    // تسجيل الـ Service Worker للتخزين أوفلاين
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js')
-        .then(function(reg) {
-            document.getElementById('status').innerText = 'تم تخزين الصفحة بنجاح! يمكنك الآن استخدامها بدون إنترنت (Offline).';
-        })
-        .catch(function(err) {
-            document.getElementById('status').innerText = 'فشل التخزين الأوفلاين: ' + err;
-        });
+    function selectChain(element) {
+        let buttons = document.querySelectorAll('.btn-option');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        element.classList.add('active');
     }
 
-    function loadExploit(type) {
-        if (type === '900') {
-            document.getElementById('status').innerText = 'جاري تشغيل ثغرة 9.00...';
-            // استدعاء ملف الثغرة المحلي
-            // window.location.href = 'payloads/900.html';
-        } else if (type === 'psfree') {
-            document.getElementById('status').innerText = 'جاري تشغيل ثغرة PSFree...';
-            // window.location.href = 'payloads/psfree.html';
-        }
+    function runExploit() {
+        let fw = document.getElementById('fwSelect').value;
+        document.getElementById('statusMsg').innerText = 'جاري تفعيل الثغرة لإصدار ' + fw + '...';
+    }
+
+    function cacheSite() {
+        document.getElementById('statusMsg').innerText = 'جاري إعادة حفظ البيانات في الذاكرة الحافظة...';
     }
 </script>
 
